@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Canaries Recipe</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" /> 
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>How to make.... a trip to the Canaries</h1>
+				<h3>(Keep clicking on the picture)</h3>
+			
+                <p id="LaPalma" onmousedown="mouseDownLaPalma()">
+                   <img src="https://i.ibb.co/vkcgB85/lap1.jpg">
+                   <br>
+                   <br>
+                    Let's go to <em>La Palma</em>!
+                   </p>
+                   
+                <script> 
+                  document.getElementById("LaPalma").style.display = "none"; 
+                </script> 
+
+                <p id="Tenerife" onmousedown="mouseDownTenerife()">
+                   <img src="https://i.ibb.co/dQF5HZ5/ten2.jpg" alt="ten1">
+                   <br>
+                   <br>
+                   Let's go to <em>Tenerife!</em>
+                   </p>
+
+                   <br> <br>
+	
+			   	<p>Hiking on the Canaries is a good idea. Tenerife and La Palma are must-see places!</p>
+	
+			</header>
+			
+			<section onmouseover="ingredientsHover()" onmouseout="ingredientsNormal()">
+				<h2>First Steps <i id="ingredients" class="fa fa-suitcase" aria-hidden="true"></i></h2>
+				<ul>
+					<li><a href="https://www.transavia.com" 
+					       style="font-family: Arial; color: slategray;">Buy a ticket</a></li>
+					<li><a href="https://www.booking.com"
+					       style="font-family: Arial; color: slategray;">Book a place</a></li>
+					<li>grab a suitcase</li>
+					<li>look for your sun glasses</li>
+				</ul>
+			</section>
+			
+			<section onmouseover="preparationHover()" onmouseout="preparationNormal()">
+				<!-- add a fontawesome icon here -->
+				<h2>What to do now! <i id="preparation" class="fa fa-plane" aria-hidden="true"></i></h2>
+				<ol>
+					<li>
+	                  Get a Vaccination! &#128514;
+					</li>
+					<li>
+					  Pack your luggage
+					</li>
+					<li>
+						Drive to the airport
+					</li>
+					<li>
+						Step in the plane
+					</li>
+					<li>
+						Leave the plane, but wait until it landed.
+					</li>
+					<li>
+						Rent a Car
+					</li>
+					<li>
+						Drive to your new home on the island
+					</li>
+					<li>
+						And then certainly <em>Enjoy!</em>
+					</li>
+				</ol>
+			</section>
+			
+			<footer>
+				<p>Copyright Kris 2020 (including pictures)</p>
+			</footer>
+		</div>
+		<script>
+		function ingredientsHover(){
+            document.getElementById("ingredients").style.fontSize = "300%";
+}
+        function ingredientsNormal(){
+            document.getElementById("ingredients").style.fontSize = "100%";
+ 
+}
+  		function preparationHover(){
+            document.getElementById("preparation").style.fontSize = "300%";
+}
+        function preparationNormal(){
+            document.getElementById("preparation").style.fontSize = "100%";
+ 
+}  	
+        function mouseDownTenerife() {
+            document.getElementById("Tenerife").style.display = "none"; 
+            document.getElementById("LaPalma").style.display = "inline"; 
+        }
+        function mouseDownLaPalma() {
+            document.getElementById("LaPalma").style.display = "none"; 
+            document.getElementById("Tenerife").style.display = "inline"; 
+        }
+
+
+        </script>
+	</body>
+</html>
